@@ -21,7 +21,14 @@ describe("Joi", function () {
     const resultIsAdmin = isAdminSchema.validate("true");
     console.info(resultIsAdmin);
 
+    console.info(typeof "true");
+    console.info(typeof resultIsAdmin.value);
+    console.info(typeof resultIsAdmin.error);
+
     const resultPrice = priceSchema.validate("10000");
     console.info(resultPrice);
+
+    console.info(typeof resultPrice.value);
+    console.info(typeof resultPrice.error);
   });
 });
